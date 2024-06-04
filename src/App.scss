@@ -331,22 +331,24 @@ svg.white{
 }
 
 
-.w-20.mt-100.h-screen.fixed.top-18.right-0 {
-    width: auto;
-    
-    h5 {
-        font-size: 2vw;
-    }
-    .w-full.flex.py-5 {
-        padding-top: 0.7rem;
-        padding-bottom: 0.7rem;
-    }
+@media only screen and (max-width: 800px) { 
+    .w-20.mt-100.h-screen.fixed.top-18.right-0 {
+        width: auto;
+        
+        h5 {
+            font-size: 2vw;
+        }
+        .w-full.flex.py-5 {
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+        }
 
-    .w-35.h-35.rounded-full.flex.items-center.justify-center.relative {
-        width: 15px;
-        height: 15px;
-    }
+        .w-35.h-35.rounded-full.flex.items-center.justify-center.relative {
+            width: 15px;
+            height: 15px;
+        }
 
+    }
 }
 
 
