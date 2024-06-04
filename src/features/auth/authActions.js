@@ -7,14 +7,17 @@ const fetchAndSetUser = async(dispatch) => {
     const userResponse = await api.get(`/get-user?accessToken=${Cookies.get('accessToken')}`);
 
     const user = userResponse.data.user;
-    sessionStorage.setItem("user", JSON.stringify(user));
-    Cookies.set('user', user._id);
+    if (user) {
+        sessionStorage.setItem("user", JSON.stringify(user));
+        Cookies.set('user', user._id);
+    
+        dispatch(setCredentials({
+            user: JSON.stringify(user),
+            accessToken: Cookies.get('accessToken'),
+            refreshToken: Cookies.get('refreshToken'),
+        }));
+    }
 
-    dispatch(setCredentials({
-        user: JSON.stringify(user),
-        accessToken: Cookies.get('accessToken'),
-        refreshToken: Cookies.get('refreshToken'),
-    }));
 };
 
 export const login = createAsyncThunk('auth/login', async (credentials, { dispatch }) => {
