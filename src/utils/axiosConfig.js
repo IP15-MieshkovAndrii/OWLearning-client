@@ -5,7 +5,7 @@ import { logout } from '../features/auth/authActions';
 import { setCredentials } from '../features/auth/authSlice';
 
 const api = axios.create({
-    baseURL: 'https://owlearning-server.onrender.com/api', 
+    baseURL: 'https://owlearning-client.onrender.com/api', 
     withCredentials: true,
 });
 
