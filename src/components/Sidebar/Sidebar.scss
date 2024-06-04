@@ -1,0 +1,98 @@
+.sidebar {
+    height: 100%;
+    min-height: calc(85vh - 2em);
+    background-color: #25025e;
+    width: calc(300px - 4em);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em 3em;
+    position: fixed;
+    z-index: 999;
+    margin:0;
+    top: 0;
+
+
+    .close{
+        position: absolute;
+        top: 20px;
+        left: 280px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .profile-details{
+        text-align: center;
+        .name{
+            font-size: 24px;
+        }
+    
+        .role {
+            font-size: 10px;
+        }
+    }
+
+    .teacher-image{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #04ff60;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }   
+
+    .options {
+        width: 100%;
+
+        h3 {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin: 0.5em 0;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 20px;
+                color:#25B6D2;
+            }
+        }
+
+        img {
+            width: 19px;
+            height: 19px;
+            margin: 0em 1em;
+            // fill:#25B6D2;
+        }
+
+
+    }
+}
+
+.hidden {
+    display: none;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar {
+        width: calc(100% - 3em);
+        padding: 1em 1.5em;
+        .close{
+            left: 330px
+        }
+    }
+}
+

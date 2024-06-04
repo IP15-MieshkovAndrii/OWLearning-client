@@ -1,0 +1,15 @@
+.teacher {
+    padding: 0;
+    min-height: 85vh;
+    background-color: #000;
+    .sidebar-menu{
+        width: 40px;
+        // margin-left: 2em;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    
+}
+

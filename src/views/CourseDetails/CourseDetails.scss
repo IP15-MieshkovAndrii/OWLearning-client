@@ -1,0 +1,90 @@
+.scourse-details {
+    width: calc(100% - 8em);
+    margin: auto;
+    padding: 2rem 4em;
+    min-height: 90vh;
+    background-color: black;
+
+    .scourse-content {
+        display: flex;
+        flex-direction: column-reverse;
+        @media(min-width: 800px) {
+            flex-direction: row;
+        }
+    }
+
+    .scourse-main {
+        width: 100%;
+        @media(min-width: 800px) {
+            width: 65%;
+            padding-right: 1.25rem;
+        }
+
+        .scourse-title {
+            font-size: 1.5625rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .scourse-overview,
+        .scourse-description {
+            margin-bottom: 2rem;
+
+            h1 {
+                font-size: 1.5625rem;
+                font-weight: 600;
+                color: white;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1.125rem;
+                margin-top: 1.25rem;
+                white-space: pre-line;
+                overflow: hidden;
+                color: white;
+            }
+        }
+    }
+
+    .scourse-sidebar {
+        width: 100%;
+        @media(min-width: 800px) {
+            width: 35%;
+            position: sticky;
+            top: 6.25rem;
+        }
+
+        .video-container {
+            position: relative;
+
+            iframe {
+                width: 100%;
+                height: 300px;
+            }
+            .scourse-video {
+                width: 100%;
+                height: auto;
+                border-radius: 0.5rem;
+            }
+
+            .enter-course {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 1rem;
+
+                .enter-button {
+                    background-color: crimson;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                    text-align: center;
+                    text-decoration: none;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

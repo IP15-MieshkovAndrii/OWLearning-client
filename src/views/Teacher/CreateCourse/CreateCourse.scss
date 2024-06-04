@@ -1,0 +1,20 @@
+.course {
+    color: white;
+}
+
+.course-label {
+    margin-top: 20px;
+    // width: 600px;
+}
+
+.course-input {
+    width: calc(100% - 1em);
+    padding: 0.7em 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box;
+}

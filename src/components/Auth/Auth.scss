@@ -1,0 +1,193 @@
+
+.auth {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000090;
+    top: 0;
+    right: 0; 
+    pointer-events: none;
+
+    .close {
+        pointer-events:all;
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        right: -330px;
+        top: -270px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+.auth-popup {
+    width: 350px;
+    height: 600px;
+    overflow: hidden;
+    box-shadow: 5px 20px 50px #000;
+    pointer-events:all;
+    
+
+    #chk {
+        display: none;
+    }
+
+    .signup {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+    }
+    label{
+        color: #fff;
+        font-size: 2.3em;
+        justify-content: center;
+        display: flex;
+        margin: 60px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+    }
+    input{
+        width: 60%;
+        height: 20px;
+        background: #e0dede;
+        justify-content: center;
+        display: flex;
+        margin: 20px auto;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+    button{
+        width: 60%;
+        height: 40px;
+        margin: 10px auto;
+        justify-content: center;
+        display: block;
+        color: #fff;
+        background: #573b8a;
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 20px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: .2s ease-in;
+        cursor: pointer;
+    }
+    button:hover{
+        background: #6d44b8;
+    }
+    .login{
+        height: 560px;
+        background: #eee;
+        border-radius: 60% / 10%;
+        transform: translateY(-180px);
+        transition: .8s ease-in-out;
+    }
+    .login label{
+        color: #573b8a;
+        transform: scale(.6);
+    }
+    
+    #chk:checked ~ .login{
+        transform: translateY(-600px);
+    }
+    #chk:checked ~ .login label{
+        transform: scale(1);	
+    }
+    #chk:checked ~ .signup label{
+        transform: scale(.6);
+    }
+
+    .checkbox-group{
+        display: flex;
+        flex-direction: row;
+        --borderColor: #48c;
+        --borderWidth: .125em;
+
+        label {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+            font-size: 1em;
+            
+        }
+
+        input[type=checkbox] {
+            -webkit-appearance: none;
+            appearance: none;
+            vertical-align: middle;
+            background: #fff;
+            font-size: 1.8em;
+            border-radius: 0.125em;
+            border: var(--borderWidth) solid var(--borderColor);
+            width: 1em;
+            height: 1em;
+            position: relative;
+        }
+          
+        input[type=checkbox]:before,
+        input[type=checkbox]:after {
+          content: "";
+          position: absolute;
+          background: var(--borderColor);
+          width: calc(var(--borderWidth) * 3);
+          height: var(--borderWidth);
+          top: 50%;
+          left: 10%;
+          transform-origin: left center;
+        }
+
+        input[type=checkbox]:before {
+            transform: rotate(45deg) translate(calc(var(--borderWidth) / -2), calc(var(--borderWidth) / -2)) scaleX(0);
+            transition: transform 200ms ease-in 200ms;
+        }
+
+        input[type=checkbox]:after {
+            width: calc(var(--borderWidth) * 5);
+            transform: rotate(-45deg) translateY(calc(var(--borderWidth) * 2)) scaleX(0);
+            transform-origin: left center;
+            transition: transform 200ms ease-in;
+        }
+
+        input[type=checkbox]:checked:before {
+            transform: rotate(45deg) translate(calc(var(--borderWidth) / -2), calc(var(--borderWidth) / -2)) scaleX(1);
+            transition: transform 200ms ease-in;
+        }
+
+        input[type=checkbox]:checked:after {
+            width: calc(var(--borderWidth) * 5);
+            transform: rotate(-45deg) translateY(calc(var(--borderWidth) * 2)) scaleX(1);
+            transition: transform 200ms ease-out 200ms;
+        }
+
+        input[type=checkbox]:focus {
+            outline: calc(var(--borderWidth) / 2) dotted rgba(0, 0, 0, 0.25);
+        }
+    
+    }
+
+}
+
+@media only screen and (max-width: 800px) { 
+
+    .auth-popup {
+        margin-left: -2em;
+
+    }
+
+    .auth .close {
+        right: -300px;
+    }
+}

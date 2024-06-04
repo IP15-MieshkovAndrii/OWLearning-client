@@ -1,0 +1,105 @@
+.course-content-list {
+    margin-top: 15px;
+    width: 100%;
+  
+    &.sticky-content {
+      margin-left: -30px;
+      min-height: 20vh;
+      position: sticky;
+      top: 24px;
+      left: 0;
+      z-index: 30;
+    }
+  
+    .section {
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+  
+      &.section-border {
+        border-color: #0000001c;
+        @media (prefers-color-scheme: dark) {
+          border-color: #ffffff8e;
+        }
+      }
+  
+      .section-header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+  
+        .section-title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+  
+          h2 {
+            font-size: 22px;
+            color: black;
+            @media (prefers-color-scheme: dark) {
+              color: white;
+            }
+          }
+  
+          .toggle-button {
+            margin-right: 16px;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            outline: none;
+            border: none;
+
+          }
+        }
+      }
+  
+      .section-info {
+        color: white;
+        margin:0;
+
+      }
+  
+      .section-videos {
+        width: 100%;
+  
+        .video-item {
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          transition: all 0.3s;
+          padding: 8px;
+  
+          &.active-video {
+            background-color: #475569; 
+          }
+  
+          .video-header {
+            display: flex;
+            align-items: center;
+  
+            .video-icon {
+              margin-right: 8px;
+            }
+  
+            .video-title {
+              font-size: 18px;
+              color: black;
+              @media (prefers-color-scheme: dark) {
+                color: white;
+              }
+            }
+          }
+  
+          .video-length {
+            padding-left: 32px;
+            color: black;
+            @media (prefers-color-scheme: dark) {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  
