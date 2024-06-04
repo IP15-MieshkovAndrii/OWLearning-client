@@ -5,22 +5,10 @@ import { logout } from '../features/auth/authActions';
 import { setCredentials } from '../features/auth/authSlice';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api', 
+    baseURL: 'https://owlearning-server.onrender.com/api', 
     withCredentials: true,
 });
 
-// api.interceptors.request.use(
-//     config => {
-//         const accessToken = Cookies.get('accessToken');
-//         if (accessToken) {
-//             config.headers.Authorization = `Bearer ${accessToken}`;
-//         }
-//         return config;
-//     },
-//     error => {
-//         return Promise.reject(error);
-//     }
-// );
 
 api.interceptors.response.use(
     response => {
